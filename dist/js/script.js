@@ -29,4 +29,11 @@ window.addEventListener('DOMContentLoaded', () => {
             hamburgerEl.classList.remove('hamburger__wrapper_active');
         }
     });
+
+    const counters = document.querySelectorAll('.skills__ratings-value'),
+          lines = document.querySelectorAll('.skills__ratings-line span');
+
+    counters.forEach((item, i) => {
+        lines[i].style.width = item.innerHTML;
+    });
 });
