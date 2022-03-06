@@ -8,11 +8,17 @@
     align-items: center;
     height: 340px;
     z-index: 3;
-    &__img {
+    .icon__svg {
         width: 20px;
         height: 20px;
     }
     &__link {
+        &:hover {
+            svg path {
+                transition: .3s all;
+                fill: $main-color;
+            }
+        }
         .telegram {
             transform: rotate(-90deg);
         }
