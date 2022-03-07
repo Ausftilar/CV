@@ -1,21 +1,28 @@
 .skills {
     padding-top: 120px;
-    &__wrapper {
+    &__items {
+        margin-top: 60px;
+        padding: 0 10px;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, minmax(270px, auto));
-        grid-auto-rows: 1fr;
+        grid-template: repeat(2, minmax(270px, auto)) / repeat(4, 270px);
+        grid-auto-rows: minmax(270px, auto);
         gap: 13px;
-        padding: 60px 10px 0 10px;
     }
     &__item {
-        border: 1px solid #000;
+        border: 1px solid black;
         padding: 30px 30px 25px 30px;
-        &-title {
-            margin-top: 20px;
+        &-img {
+            display: flex;
+            align-items: center;
+            min-height: 65px;
         }
-        &-descr {
+        h3 {
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+        p {
             margin-top: 15px;
+            margin-bottom: 0;
             font-size: 12px;
             line-height: 18px;
         }
