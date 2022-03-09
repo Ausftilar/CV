@@ -51,12 +51,12 @@
 
             <nav>
                 <ul class="menu__list">
-                    <li class="menu__link"><a href="#">ПРО МЕНЯ</a></li>
-                    <li class="menu__link"><a href="#">МОЙ ОПЫТ</a></li>
-                    <li class="menu__link"><a href="#">МОИ НАВЫКИ</a></li>
-                    <li class="menu__link"><a href="#">МОИ РАБОТЫ</a></li>
-                    <li class="menu__link"><a href="#">ПРАЙС-ЛИСТ</a></li>
-                    <li class="menu__link"><a href="#">КОНТАКТЫ</a></li>
+                    <li class="menu__link"><a href="#aboutMe">ПРО МЕНЯ</a></li>
+                    <li class="menu__link"><a href="#expMe">МОЙ ОПЫТ</a></li>
+                    <li class="menu__link"><a href="#skills">МОИ НАВЫКИ</a></li>
+                    <li class="menu__link"><a href="#works">МОИ РАБОТЫ</a></li>
+                    <li class="menu__link"><a href="#list">ПРАЙС-ЛИСТ</a></li>
+                    <li class="menu__link"><a href="#contacts">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
 
@@ -83,7 +83,7 @@
         <div class="menu__overlay"></div>
     </div>
 
-    <section class="promo">
+    <section class="promo" id="aboutMe">
         <div class="container">
             <div class="title title_fz16 promo__subtitle">Меня зовут Михаил Голдеферг</div>
             <h1 class="title title_fz48 promo__title">Я web-разработчик из города Саратов</h1>
@@ -98,7 +98,11 @@
         <div class="container">
             <div class="about__wrapper">
                 <div class="about__photo">
-                    <img src="img/main_photo.jpg" alt="MyPhoto">
+                    <picture>
+                        <source type="image/webp" srcset="img/main_photo.webp">
+                        <source type="image/jpeg2000" srcset="img/main_photo.jpeg2000">
+                        <img src="img/main_photo.jpg" alt="MyPhoto">
+                    </picture>
                 </div>
                 <div class="about__descr">
                     <h2 class="title title_fz16 about__title">Про меня</h2>
@@ -153,7 +157,7 @@
         </div>
     </section>
 
-    <section class="resume">
+    <section class="resume" id="expMe">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Опыт</h2>
             <div class="title title_fz36 title__section-subtitle">Чем я буду полезен</div>
@@ -216,7 +220,7 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Навыки</h2>
             <div class="title title_fz36 title__section-subtitle">Что я использую в работе</div>
@@ -284,7 +288,7 @@
                 </div>
                 <div class="skills__ratings-item">
                     <div class="title title_fz14 skills__ratings-title">Создание приложений</div>
-                    <div class="skills__ratings-value">40%</div>
+                    <div class="skills__ratings-value">50%</div>
                     <div class="skills__ratings-line">
                         <span></span>
                     </div>
@@ -314,7 +318,7 @@
         </div>
     </section>
 
-    <!-- <section class="portfolio">
+    <section class="portfolio" id="works">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Портфолио</h2>
             <div class="title title_fz36 title__section-subtitle">Мои работы</div>
@@ -334,43 +338,51 @@
                 </a>
                 <a href="#" class="portfolio__item">
                 </a>
-                <a href="/museum" class="portfolio__item horizontal">
+                <a href="/museum" class="portfolio__item horizonal">
                 </a>
             </div>
         </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="price">
+    <section class="price" id="list">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Прайс-лист</h2>
             <div class="divider"></div>
-
+    
             <div class="price__wrapper">
                 <div class="price__item">
-                    <div class="price__title title_fz14">Landing-page</div>
-                    <div class="price__value">от 100 $.</div>
-                    <div class="price__descr">Одностраничный сайт для презентации услуг/товаров/...</div>
+                    <div class="price__type">Landing-page</div>
+                    <div class="price__count">от 100 $.</div>
+                    <div class="price__descr">
+                        Одностраничный сайт для презентации услуг/товаров/...
+                    </div>
                 </div>
                 <div class="price__item">
-                    <div class="price__title title_fz14">Web-приложение</div>
-                    <div class="price__value">от 400 $.</div>
-                    <div class="price__descr">Приложение внутри браузера для лучшего комфорта</div>
+                    <div class="price__type">Web-приложение</div>
+                    <div class="price__count">от 400 $.</div>
+                    <div class="price__descr">
+                        Приложение внутри браузера для лучшего комфорта
+                    </div>
                 </div>
                 <div class="price__item">
-                    <div class="price__title title_fz14">Корпоративный сайт</div>
-                    <div class="price__value">от 300 $.</div>
-                    <div class="price__descr">Сайт для вашего бизнеса или компании</div>
+                    <div class="price__type">Корпоративный сайт</div>
+                    <div class="price__count">от 300 $.</div>
+                    <div class="price__descr">
+                        Сайт для вашего бизнеса или компании
+                    </div>
                 </div>
                 <div class="price__item">
-                    <div class="price__title title_fz14">Интернет-магазин</div>
-                    <div class="price__value">от 400 $.</div>
-                    <div class="price__descr">Инструмент для ваших продаж в сети</div>
+                    <div class="price__type">Интернет-магазин</div>
+                    <div class="price__count">от 400 $.</div>
+                    <div class="price__descr">
+                        Инструмент для ваших продаж в сети
+                    </div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="container">
             <div class="contacts__wrapper">
                 <div class="contacts__photo">
@@ -429,7 +441,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <script src="js/script.js"></script>
 </body>

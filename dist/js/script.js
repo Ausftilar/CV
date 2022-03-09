@@ -1,7 +1,4 @@
 window.addEventListener('DOMContentLoaded', () => {
-    //Пока без делегирования событий
-    //Буду оптимизировать js код после того, как доделаю все остальное
-    //Не смотрите на него, мне стыдно немного))))
     const hamburger = document.querySelector('.hamburger'),
           overlay = document.querySelector('.menu__overlay'),
           hamburgerEl = document.querySelector('.hamburger__wrapper'),
