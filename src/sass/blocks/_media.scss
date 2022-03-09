@@ -213,6 +213,10 @@
             grid-template: 45px 190px 45px / repeat(2, 250px);
         }
     }
+    .policy_title {
+        font-size: 20px;
+        line-height: 40px;
+    }
 }
 
 @media (max-width: 576px) {

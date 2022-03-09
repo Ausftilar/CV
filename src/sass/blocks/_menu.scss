@@ -124,6 +124,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .icon__svg {
+            width: 20px;
+            height: 20px;
+        }
         a {
             &:hover {
                 svg path {
