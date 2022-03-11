@@ -1,30 +1,14 @@
 window.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger'),
-          overlay = document.querySelector('.menu__overlay'),
+    //Nav menu
+    const panel = document.querySelectorAll('.panel'),
           hamburgerEl = document.querySelector('.hamburger__wrapper'),
           menu = document.querySelector('.menu'),
-          closeElem = document.querySelector('.menu__close'),
           menuLink = document.querySelectorAll('.menu__link');
-    
-    hamburger.addEventListener('click', () => {
-        menu.classList.add('active');
-        hamburgerEl.classList.add('hamburger__wrapper_active');
-    });
 
-    closeElem.addEventListener('click', () => {
-        menu.classList.remove('active');
-        hamburgerEl.classList.remove('hamburger__wrapper_active');
-    });
-
-    overlay.addEventListener('click', () => {
-        menu.classList.remove('active');
-        hamburgerEl.classList.remove('hamburger__wrapper_active');
-    });
-
-    menuLink.forEach(item => {
+    panel.forEach(item => {
         item.addEventListener('click', () => {
-            menu.classList.remove('active');
-            hamburgerEl.classList.remove('hamburger__wrapper_active');
+            menu.classList.toggle('active');
+            hamburgerEl.classList.toggle('hamburger__wrapper_active');
         });
     });
 
@@ -35,10 +19,51 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    //ratings
     const counters = document.querySelectorAll('.skills__ratings-value'),
           lines = document.querySelectorAll('.skills__ratings-line span');
 
     counters.forEach((item, i) => {
         lines[i].style.width = item.innerHTML;
+    });
+
+    //scroll
+    const anchors = document.querySelectorAll('a[href*="#"]');
+
+    anchors.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const blockId = item.getAttribute('href');
+            document.querySelector('' + blockId).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    });
+
+    //Validate
+    $('.contacts__form').validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            checkbox: "required"
+        },
+        messages: {
+            name: {
+                required: "Пожалуйста, введите имя",
+                minlength: jQuery.validator.format("Введите минимум {0} символа!")
+            },
+            email: {
+                required: "Пожалуйста, введите почту",
+                email: "Неправильно введен адрес почты"
+            },
+            checkbox: "Необходимо согласие"
+        }
     });
 });

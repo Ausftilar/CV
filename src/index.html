@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <div class="hamburger">
+    <div class="hamburger panel">
         <div class="hamburger__wrapper">
             <span></span>
             <span class="long"></span>
@@ -61,7 +61,7 @@
 
     <div class="menu">
         <div class="menu__block">
-            <div class="menu__close">
+            <div class="menu__close panel">
                 <svg width="29" height="30" viewBox="0 0 29 30" fill="none">
                     <path d="M17.1568 14.5231L28.4489 3.23075C29.1837 2.49623 29.1837 1.30861 28.4489 0.574085C27.7144 -0.160437 26.5267 -0.160437 25.7922 0.574085L14.4998 11.8665L3.20781 0.574085C2.47295 -0.160437 1.28567 -0.160437 0.551149 0.574085C-0.183716 1.30861 -0.183716 2.49623 0.551149 3.23075L11.8432 14.5231L0.551149 25.8155C-0.183716 26.55 -0.183716 27.7376 0.551149 28.4721C0.917206 28.8385 1.39852 29.0226 1.87948 29.0226C2.36045 29.0226 2.84141 28.8385 3.20781 28.4721L14.4998 17.1798L25.7922 28.4721C26.1586 28.8385 26.6396 29.0226 27.1205 29.0226C27.6015 29.0226 28.0825 28.8385 28.4489 28.4721C29.1837 27.7376 29.1837 26.55 28.4489 25.8155L17.1568 14.5231Z" fill="black"/>
                 </svg>
@@ -69,12 +69,12 @@
 
             <nav>
                 <ul class="menu__list">
-                    <li class="menu__link"><a href="#aboutMe">ПРО МЕНЯ</a></li>
-                    <li class="menu__link"><a href="#expMe">МОЙ ОПЫТ</a></li>
-                    <li class="menu__link"><a href="#skills">МОИ НАВЫКИ</a></li>
-                    <li class="menu__link"><a href="#works">МОИ РАБОТЫ</a></li>
-                    <li class="menu__link"><a href="#list">ПРАЙС-ЛИСТ</a></li>
-                    <li class="menu__link"><a href="#contacts">КОНТАКТЫ</a></li>
+                    <li class="menu__link panel"><a href="#aboutMe">ПРО МЕНЯ</a></li>
+                    <li class="menu__link panel"><a href="#expMe">МОЙ ОПЫТ</a></li>
+                    <li class="menu__link panel"><a href="#skills">МОИ НАВЫКИ</a></li>
+                    <li class="menu__link panel"><a href="#works">МОИ РАБОТЫ</a></li>
+                    <li class="menu__link panel"><a href="#list">ПРАЙС-ЛИСТ</a></li>
+                    <li class="menu__link panel"><a href="#contacts">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
 
@@ -98,7 +98,7 @@
                 </a>
             </div>
         </div>
-        <div class="menu__overlay"></div>
+        <div class="menu__overlay panel"></div>
     </div>
 
     <section class="promo">
@@ -448,11 +448,11 @@
 
                     <form action="#" class="contacts__form">
                         <div class="contacts__input">
-                            <input name="name" id="name" type="text" placeholder="Михаил" required>
+                            <input name="name" id="name" type="text" placeholder="Михаил">
                             <label for="name">Ваше имя</label>
                         </div>
                         <div class="contacts__input">
-                            <input name="email" id="email" type="email" required>
+                            <input name="email" id="email" type="email">
                             <label for="email">Ваша почта</label>
                         </div>
                         <div class="contacts__textarea">
@@ -462,7 +462,7 @@
                         <div class="contacts__triggers">
                             <button class="contacts__btn btn">Отправить сообщение</button>
                             <div class="contacts__policy">
-                                <input required type="checkbox">
+                                <input name="checkbox" type="checkbox" id="checkbox">
                                 <span>Я согласен(а) с <a href="/policy.html">политикой конфиденциальности</a></span>
                             </div>
                         </div>
@@ -472,6 +472,9 @@
         </div>
     </section>
 
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

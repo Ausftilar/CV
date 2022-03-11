@@ -1,5 +1,14 @@
 .contacts {
     padding: 120px 0 90px 0;
+    label.error {
+        display: block;
+        position: absolute;
+        top: 45px;
+        left: 12px;
+        color: red;
+        padding: 0 8px;
+        font-size: 12px;
+    }
     &__wrapper {
         padding: 0 35px 0px 52px;
         display: grid;
@@ -74,12 +83,16 @@
         column-gap: 35px;
     }
     &__policy {
+        position: relative;
         font-size: 12px;
         line-height: 14px;
         display: flex;
         align-items: center;
         input {
             margin-right: 10px;
+        }
+        label.error {
+            top: 35px;
         }
     }
     &__input {
