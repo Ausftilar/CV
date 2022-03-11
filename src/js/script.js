@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    //ratings
+    //Ratings
     const counters = document.querySelectorAll('.skills__ratings-value'),
           lines = document.querySelectorAll('.skills__ratings-line span');
 
@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
         lines[i].style.width = item.innerHTML;
     });
 
-    //scroll
+    //Scroll
     const anchors = document.querySelectorAll('a[href*="#"]');
 
     anchors.forEach(item => {
@@ -65,5 +65,26 @@ window.addEventListener('DOMContentLoaded', () => {
             },
             checkbox: "Необходимо согласие"
         }
+    });
+
+    //Submit form
+    $('.contacts__form').submit(function(e) {
+        e.preventDefault();
+
+        if (!$(this).valid()) {
+            return;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+
+            $('.contacts__form').trigger('reset');
+        });
+        
+        return false;
     });
 });
