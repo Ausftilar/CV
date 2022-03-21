@@ -11,13 +11,13 @@ $mail->CharSet = 'utf-8';
 $mail->isSMTP();
 $mail->Host = 'smtp.mail.ru';
 $mail->SMTPAuth = true;
-$mail->Username = 'jeichon@mail.ru';
+$mail->Username = '';
 $mail->Password = 'DYTHRGV7W9mQyzn6zzza';
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
-$mail->setFrom('jeichon@mail.ru', 'Portfolio');
-$mail->addAddress('mikhailgoldeferg@gmail.com');
+$mail->setFrom('', 'Portfolio');
+$mail->addAddress('');
 $mail->isHTML(true);
 
 $mail->Subject = 'Данные';
